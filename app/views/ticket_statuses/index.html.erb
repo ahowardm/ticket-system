@@ -1,0 +1,9 @@
+<h1><%= t('activerecord.models.ticket_status', count: @ticket_statuses.size) %></h1>
+
+<ul>
+    <% @ticket_statuses.each do |p| %>
+        <li><%= p.name %></li>
+    <% end %>
+</ul>
+
+<%= link_to t('views.ticket_status.new'), new_ticket_status_path %>
