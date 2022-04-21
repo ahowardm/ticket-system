@@ -1,0 +1,19 @@
+---
+es:
+  activerecord:
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+    attributes:
+      user:
+        id: ID
+        email: Mail
+        encrypted_password: Password encriptada
+        first_name: Nombre
+        last_name: Apellido
+        remember_created_at: Recordar creado en
+        reset_password_sent_at: Fecha reinicio password
+        reset_password_token: Código reinicio password
+        created_at: Creado en
+        updated_at: Actualizado en
