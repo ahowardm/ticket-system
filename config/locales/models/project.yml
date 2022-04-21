@@ -1,0 +1,13 @@
+---
+es:
+  activerecord:
+    models:
+      project:
+        one: Proyecto
+        other: Proyectos
+    attributes:
+      project:
+        id: ID
+        name: Nombre
+        created_at: Creado en
+        Updated_at: Actualizado en
