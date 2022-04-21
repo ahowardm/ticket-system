@@ -1,0 +1,9 @@
+<h1><%= t('activerecord.models.project', count: @projects.size) %></h1>
+
+<ul>
+    <% @projects.each do |p| %>
+        <li><%= p.name %></li>
+    <% end %>
+</ul>
+
+<%= link_to t('views.project.new'), new_project_path %>
