@@ -1,0 +1,13 @@
+---
+es:
+  activerecord:
+    models:
+      ticket_status:
+        one: Estado
+        other: Estados
+    attributes:
+      ticket_status:
+        id: ID
+        name: Nombre
+        created_at: Creado en
+        Updated_at: Actualizado en
