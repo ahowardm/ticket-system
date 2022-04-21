@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Better forms
 gem 'simple_form'
 
+# Authentication
+gem 'devise'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
