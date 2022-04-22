@@ -1,0 +1,15 @@
+<h1><%= t('activerecord.models.ticket', count: @tickets.size)%></h1>
+
+<ul>
+  <% @tickets.each do |t| %>
+    <li>
+      <b><%= t.project.name %></b> |
+      <%= t.ticket_status.name %> |
+      <%= t.title %> |
+      <%= link_to 'Eliminar', ticket_path(t), data: { turbo_method: :delete, turbo_confirm: "Estás seguro?" } %> |
+      <%= link_to 'Editar', edit_ticket_path(t) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to t('views.ticket.new'), new_ticket_path %>
