@@ -1,0 +1,17 @@
+---
+es:
+  activerecord:
+    models:
+      ticket:
+        one: Ticket
+        other: Tickets
+    attributes:
+      ticket:
+        id: ID
+        title: Título
+        description: Descripción
+        created_at: Creado en
+        updated_at: Actualizado en
+        project_id: Proyecto
+        ticket_status_id: Estado
+        user_id: Usuario
