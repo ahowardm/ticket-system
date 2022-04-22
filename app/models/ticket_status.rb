@@ -3,7 +3,7 @@
 # Table name: ticket_statuses
 #
 #  id         :bigint           not null, primary key
-#  name       :text
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
