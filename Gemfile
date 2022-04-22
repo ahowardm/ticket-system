@@ -48,6 +48,12 @@ gem 'simple_form'
 # Authentication
 gem 'devise'
 
+# Parse markdown
+gem 'redcarpet'
+
+# Parse code in markdown
+gem 'coderay'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
