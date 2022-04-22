@@ -1,9 +1,18 @@
 class TicketsController < ApplicationController
-  before_action :find_ticket, only: [:edit, :update, :destroy]
+  before_action :find_ticket, only: [:show, :edit, :update, :destroy, :update_status]
   before_action :load_references, only: [:new, :edit]
 
   def index
     @tickets = Ticket.all.includes(:project)
+  end
+
+  def show
+    get_ticket_statuses
+  end
+
+  def update_status
+    @ticket.update! ticket_status_id: params[:update_status][:ticket_status_id]
+    redirect_to @ticket
   end
 
   def new
@@ -37,7 +46,11 @@ class TicketsController < ApplicationController
     end
 
     def load_references
-      @ticket_statuses = TicketStatus.all.map {|t| [t.name, t.id]}
+      get_ticket_statuses
       @projects = Project.all.map {|p| [p.name, p.id]}
+    end
+
+    def get_ticket_statuses
+      @ticket_statuses = TicketStatus.all.map {|t| [t.name, t.id]}
     end
 end
