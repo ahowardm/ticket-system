@@ -7,7 +7,8 @@
       <%= t.ticket_status.name %> |
       <%= t.title %> |
       <%= link_to 'Eliminar', ticket_path(t), data: { turbo_method: :delete, turbo_confirm: "Estás seguro?" } %> |
-      <%= link_to 'Editar', edit_ticket_path(t) %>
+      <%= link_to 'Editar', edit_ticket_path(t) %> |
+      <%= link_to 'Ver', ticket_path(t) %>
     </li>
   <% end %>
 </ul>

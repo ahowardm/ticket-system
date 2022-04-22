@@ -1,0 +1,16 @@
+<h1><%= @ticket.title %></h1>
+
+<%= simple_form_for :update_status, url: ticket_update_status_path, data: { turbo_method: :patch } do |f| %>
+  <%= f.select :ticket_status_id, @ticket_statuses, {selected: @ticket.ticket_status_id}, onchange: 'this.form.submit();' %>
+<% end %>
+
+<h3><%=t('activerecord.attributes.ticket.description') %></h3>
+<%= markdown(@ticket.description) %>
+
+<div>
+  <b><%= t('activerecord.attributes.ticket.created_at') %>:</b> <%= @ticket.created_at.to_fs(:long) %>
+  <br>
+  <b><%= t('activerecord.attributes.ticket.project_id') %>:</b> <%= @ticket.project.name %>
+  <br>
+  <b><%= t('activerecord.attributes.ticket.user_id') %>:</b> <%= @ticket.user.full_name %>
+</div>

@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :projects
   resources :ticket_statuses
   resources :tickets
+  post 'tickets/:id/update_status', to: 'tickets#update_status', as: :ticket_update_status
 end
