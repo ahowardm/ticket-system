@@ -17,3 +17,9 @@ es:
         reset_password_token: Código reinicio password
         created_at: Creado en
         updated_at: Actualizado en
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: Mail ya registrado
