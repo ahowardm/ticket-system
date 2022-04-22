@@ -2,7 +2,9 @@
 
 <ul>
     <% @ticket_statuses.each do |p| %>
-        <li><%= p.name %></li>
+        <li><%= p.name %> |
+          <%= link_to 'Eliminar', ticket_status_path(p), data: { turbo_method: :delete, turbo_confirm: "Estás seguro?" } %> |
+          <%= link_to 'Editar', edit_ticket_status_path(p) %> </li></li>
     <% end %>
 </ul>
 
